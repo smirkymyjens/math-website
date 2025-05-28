@@ -1,14 +1,20 @@
 import './globals.css'
+import Navbar from './components/Navbar'
 
 export const metadata = {
-  title: 'My Vercel Website',
-  description: 'A modern website built with Next.js and Tailwind CSS',
+  title: 'My App',
+  description: 'A modern application with an equation generator',
 }
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body className="bg-gray-50">
+        <Navbar />
+        <main className="min-h-[calc(100vh-4rem)]">
+          {children}
+        </main>
+      </body>
     </html>
   )
 } 
